@@ -11,6 +11,7 @@ This document provides instructions on how to set up and run the mitmproxy serve
 
 1.  **Install mitmproxy:**
     Open your terminal or command prompt and install `mitmproxy` using pip:
+
     ```bash
     pip install mitmproxy
     ```
@@ -18,8 +19,7 @@ This document provides instructions on how to set up and run the mitmproxy serve
 2.  **Get the script:**
     Clone this repository or download the `main.py` script to your local machine.
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/muhammadAbdulMannan2022/myproxy.git
     ```
 
 ## Running the Proxy Server
@@ -39,8 +39,9 @@ mitmdump -s main.py
 To allow other devices on your network to connect to the proxy, you need to bind the proxy to all network interfaces.
 
 1.  **Find your computer's local IP address.**
-    *   **Windows:** Open Command Prompt and type `ipconfig`. Look for the "IPv4 Address".
-    *   **macOS/Linux:** Open a terminal and type `ifconfig` or `ip addr`. Look for the `inet` address.
+
+    - **Windows:** Open Command Prompt and type `ipconfig`. Look for the "IPv4 Address".
+    - **macOS/Linux:** Open a terminal and type `ifconfig` or `ip addr`. Look for the `inet` address.
 
 2.  **Run the proxy:**
     Use the following command, which starts the proxy on port 8080. You can use a different port if you prefer.
@@ -57,8 +58,8 @@ To capture traffic from a mobile device, you must configure it to use the proxy 
 
 1.  Connect to the **same Wi-Fi network** as your computer running the proxy.
 2.  Navigate to your Wi-Fi settings and configure a **manual HTTP proxy**.
-    *   **Server/Host:** Enter your computer's local IP address (from the step above).
-    *   **Port:** Enter the port you are using (e.g., `8080`).
+    - **Server/Host:** Enter your computer's local IP address (from the step above).
+    - **Port:** Enter the port you are using (e.g., `8080`).
 
 ### Installing the CA Certificate
 
@@ -86,5 +87,5 @@ Follow the instructions for your specific operating system to download and insta
 
 All intercepted traffic will be processed by `main.py`.
 
--   **Console:** Real-time logs are printed to the console where `mitmdump` is running.
--   **File:** A detailed log of requests and responses is saved to the `mitm_logs.txt` file in the same directory.
+- **Console:** Real-time logs are printed to the console where `mitmdump` is running.
+- **File:** A detailed log of requests and responses is saved to the `mitm_logs.txt` file in the same directory.
